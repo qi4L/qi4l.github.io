@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="前言 做个记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APK流量转发">
+<meta property="og:url" content="http://example.com/2019/04/13/APK%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/index.html">
+<meta property="og:site_name" content="QI4L的沉思录">
+<meta property="og:description" content="前言 做个记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240425151007.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_1.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdown%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220919105246.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdown%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220919105329.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_5.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_6.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_7.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_8.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_9.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_10.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_11.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_12.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_13.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_14.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_15.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_16.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_17.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_18.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_19.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_20.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_21.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_22.png">
+<meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_23.png">
+<meta property="article:published_time" content="2019-04-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-26T02:14:46.779Z">
+<meta property="article:author" content="QI4L">
+<meta property="article:tag" content="APP">
+<meta property="article:tag" content="APK">
+<meta property="article:tag" content="APP渗透">
+<meta property="article:tag" content="小程序渗透">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240425151007.png">
+
+
+<link rel="canonical" href="http://example.com/2019/04/13/APK%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2019/04/13/APK%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/","path":"2019/04/13/APK流量转发/","title":"APK流量转发"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>APK流量转发 | QI4L的沉思录</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">QI4L的沉思录</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">千里之行，始于足下</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#APK%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91"><span class="nav-text">APK流量转发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85BurpSuite%E8%AF%81%E4%B9%A6"><span class="nav-text">安装BurpSuite证书</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-%E9%85%8D%E7%BD%AEClash"><span class="nav-text">安装+配置Clash</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8F%96%E5%8D%95%E4%B8%AAAPP%E6%B5%81%E9%87%8F%E5%8C%85"><span class="nav-text">抓取单个APP流量包</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="QI4L"
+      src="/images/log111.jpg">
+  <p class="site-author-name" itemprop="name">QI4L</p>
+  <div class="site-description" itemprop="description">认真思考，努力奋斗，不做娱乐圈研究员，不做实验室黑客，能真正为平台、行业甚至国家贡献自己的力量</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/qi4L" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/04/13/APK%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/log111.jpg">
+      <meta itemprop="name" content="QI4L">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QI4L的沉思录">
+      <meta itemprop="description" content="认真思考，努力奋斗，不做娱乐圈研究员，不做实验室黑客，能真正为平台、行业甚至国家贡献自己的力量">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="APK流量转发 | QI4L的沉思录">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          APK流量转发
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-04-13 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-13T00:00:00+08:00">2019-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-26 10:14:46" itemprop="dateModified" datetime="2024-04-26T10:14:46+08:00">2024-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AE%89%E5%8D%93/" itemprop="url" rel="index"><span itemprop="name">安卓</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>做个记录</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="APK流量转发"><a href="#APK流量转发" class="headerlink" title="APK流量转发"></a>APK流量转发</h1><p>实现安卓APP全局&#x2F;单个APP的代理</p>
+<p>需要的工具有：</p>
+<ul>
+<li>proxifier</li>
+<li>clash</li>
+<li>夜神模拟器</li>
+</ul>
+<h1 id="安装BurpSuite证书"><a href="#安装BurpSuite证书" class="headerlink" title="安装BurpSuite证书"></a>安装BurpSuite证书</h1><p>先在Tools→Proxy页面新建局域网代理端口：</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240425151007.png"></p>
+<p>点击Import &#x2F; expoet CA certificate 选择Certificate in DER format导出CA证书并保存到某一个文件夹：</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_1.png"></p>
+<p>点击文件助手打开电脑文件夹，将证书移动至Download文件夹下（默认就是Download目录）：</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdown%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220919105246.png"></p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdown%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220919105329.png"></p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_5.png"></p>
+<p>回到本机中，打开CMD窗口，cd命令进入下载的夜神模拟器的bin目录下：</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_6.png"></p>
+<p>nox_adb.exe即为夜神模拟器adb模式端口，使用nox_adb.exe执行以下命令（分步执行）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nox_adb.exe root</span><br><span class="line">nox_adb.exe remount</span><br><span class="line">nox_adb.exe shell</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_7.png"></p>
+<p>此时在此处输入：cd sdcard&#x2F;Download</p>
+<p>执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv CA.der /system/etc/security/cacerts/</span><br><span class="line">chmod 644 /system/etc/security/cacerts/CA.der</span><br></pre></td></tr></table></figure>
+
+<p>PS：<code>此时后缀名一定要是xxx.der不是的话要重新生成证书并保存到htdocs文件夹！</code></p>
+<p>上诉方法如果未成功，可以用这个。</p>
+<p>把CA.der改为CA.cer</p>
+<p>点系统，搜索从SD卡安装证书，找到CA.cer安装即可。</p>
+<h1 id="安装-配置Clash"><a href="#安装-配置Clash" class="headerlink" title="安装+配置Clash"></a>安装+配置Clash</h1><p>下载<a target="_blank" rel="noopener" href="https://github.com/Kr328/ClashForAndroid/tags">clash</a>，原作者已删库，自行找。</p>
+<p>下载好之后在夜神模拟器中导入apk文件：</p>
+<p>直接拖入即可</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_8.png"></p>
+<p>在本机中新建一个yaml文件</p>
+<figure class="highlight yaml"><figcaption><span>yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mixed-port:</span> <span class="number">7890</span></span><br><span class="line"><span class="attr">allow-lan:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">mode:</span> <span class="string">global</span></span><br><span class="line"><span class="attr">log-level:</span> <span class="string">info</span></span><br><span class="line"><span class="attr">external-controller:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:9090</span></span><br><span class="line"><span class="attr">proxies:</span></span><br><span class="line">  <span class="comment"># http</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;http&quot;</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">server:</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.106</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">8081</span></span><br><span class="line">    <span class="comment"># username: username</span></span><br><span class="line">    <span class="comment"># password: password</span></span><br><span class="line">    <span class="comment"># tls: true # https</span></span><br><span class="line">    <span class="comment"># skip-cert-verify: true</span></span><br><span class="line">    <span class="comment"># sni: custom.com</span></span><br><span class="line"><span class="attr">proxy-groups:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Proxy</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">select</span></span><br><span class="line">    <span class="comment"># disable-udp: true</span></span><br><span class="line">    <span class="attr">proxies:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">http</span></span><br></pre></td></tr></table></figure>
+
+<p>192.168.0.106和后面的端口改为自己的IP和burp监听的端口</p>
+<p>再把此文件拖入夜神模拟器中</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_9.png"></p>
+<p>打开clash，点击配置</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_10.png"></p>
+<p>点+号</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_11.png"></p>
+<p>将刚刚写的yaml文件导入</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_12.png"></p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_13.png"></p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_14.png"></p>
+<p>之后在启动代理</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_15.png"></p>
+<p>点击代理</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_16.png"></p>
+<p>选择http，按下闪电按钮</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_17.png"></p>
+<p>此时就可以抓取APP全部流量包了</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_18.png"></p>
+<h2 id="抓取单个APP流量包"><a href="#抓取单个APP流量包" class="headerlink" title="抓取单个APP流量包"></a>抓取单个APP流量包</h2><p>选关闭代理，再点设备</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_19.png"></p>
+<p>选择网络</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_20.png"></p>
+<p>单击<code>访问控制模式</code></p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_21.png"></p>
+<p>选择仅运行已选择的应用</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_22.png"></p>
+<p>访问控制应用包列表</p>
+<p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdownimage_23.png"></p>
+<p>即可抓取单个APP的流量包</p>
+<p>同理，要渗透小程序时，就仅通过微信即可</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/APP/" rel="tag"># APP</a>
+              <a href="/tags/APK/" rel="tag"># APK</a>
+              <a href="/tags/APP%E6%B8%97%E9%80%8F/" rel="tag"># APP渗透</a>
+              <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%B8%97%E9%80%8F/" rel="tag"># 小程序渗透</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/06/20/JavaMemShell/" rel="next" title="JavaMemShell">
+                  JavaMemShell <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">QI4L</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"neutral","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.min.js","integrity":"sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
