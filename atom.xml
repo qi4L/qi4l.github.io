@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>QI4L的沉思录</title>
+  
+  <subtitle>千里之行，始于足下</subtitle>
+  <link href="https://qi4l.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://qi4l.github.io/"/>
+  <updated>2024-10-13T03:39:32.949Z</updated>
+  <id>https://qi4l.github.io/</id>
+  
+  <author>
+    <name>QI4L</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PatchGuard 工作原理</title>
+    <link href="https://qi4l.github.io/2024/10/13/PatchGuard%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>https://qi4l.github.io/2024/10/13/PatchGuard%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</id>
+    <published>2024-10-12T16:00:00.000Z</published>
+    <updated>2024-10-13T03:39:32.949Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;之前找资料的时候发现国内关于这块基本是空白的，参阅多篇论文后有的此文&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows安全" scheme="https://qi4l.github.io/categories/Windows%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="Windows" scheme="https://qi4l.github.io/tags/Windows/"/>
+    
+    <category term="PatchGuard" scheme="https://qi4l.github.io/tags/PatchGuard/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈EPT无痕HOOK的方法</title>
+    <link href="https://qi4l.github.io/2024/08/04/%E6%B5%85%E8%B0%88EPT%E6%97%A0%E7%97%95HOOK%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://qi4l.github.io/2024/08/04/%E6%B5%85%E8%B0%88EPT%E6%97%A0%E7%97%95HOOK%E7%9A%84%E6%96%B9%E6%B3%95/</id>
+    <published>2024-08-03T16:00:00.000Z</published>
+    <updated>2024-07-09T01:34:46.059Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;目前过pg的主流方法&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows安全" scheme="https://qi4l.github.io/categories/Windows%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="Windows" scheme="https://qi4l.github.io/tags/Windows/"/>
+    
+    <category term="win32api" scheme="https://qi4l.github.io/tags/win32api/"/>
+    
+    <category term="vt" scheme="https://qi4l.github.io/tags/vt/"/>
+    
+    <category term="pg" scheme="https://qi4l.github.io/tags/pg/"/>
+    
+    <category term="hook" scheme="https://qi4l.github.io/tags/hook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NetUserAdd逆向</title>
+    <link href="https://qi4l.github.io/2024/07/02/NetUserAdd%E9%80%86%E5%90%91/"/>
+    <id>https://qi4l.github.io/2024/07/02/NetUserAdd%E9%80%86%E5%90%91/</id>
+    <published>2024-07-01T16:00:00.000Z</published>
+    <updated>2024-07-09T01:08:21.104Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;闲着就写点东西。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows安全" scheme="https://qi4l.github.io/categories/Windows%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="Re" scheme="https://qi4l.github.io/tags/Re/"/>
+    
+    <category term="Windows" scheme="https://qi4l.github.io/tags/Windows/"/>
+    
+    <category term="win32api" scheme="https://qi4l.github.io/tags/win32api/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Potato 浅析</title>
+    <link href="https://qi4l.github.io/2024/04/28/Potato%E6%B5%85%E6%9E%90/"/>
+    <id>https://qi4l.github.io/2024/04/28/Potato%E6%B5%85%E6%9E%90/</id>
+    <published>2024-04-27T16:00:00.000Z</published>
+    <updated>2024-04-28T02:57:29.684Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在不用内核提权的情况下，用的最多的就是土豆和UAC Bypass了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows安全" scheme="https://qi4l.github.io/categories/Windows%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="Windows" scheme="https://qi4l.github.io/tags/Windows/"/>
+    
+    <category term="提取" scheme="https://qi4l.github.io/tags/%E6%8F%90%E5%8F%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVE-2022-25610 分析</title>
+    <link href="https://qi4l.github.io/2023/04/01/CVE-2023-25610%20%E5%88%86%E6%9E%90/"/>
+    <id>https://qi4l.github.io/2023/04/01/CVE-2023-25610%20%E5%88%86%E6%9E%90/</id>
+    <published>2023-03-31T16:00:00.000Z</published>
+    <updated>2024-04-26T02:14:46.781Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;记录&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="二进制安全" scheme="https://qi4l.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="ROP" scheme="https://qi4l.github.io/tags/ROP/"/>
+    
+    <category term="堆溢出" scheme="https://qi4l.github.io/tags/%E5%A0%86%E6%BA%A2%E5%87%BA/"/>
+    
+    <category term="Fortinet" scheme="https://qi4l.github.io/tags/Fortinet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVE-2022-42475 分析</title>
+    <link href="https://qi4l.github.io/2023/03/15/CVE-2022-42475%20%E5%88%86%E6%9E%90/"/>
+    <id>https://qi4l.github.io/2023/03/15/CVE-2022-42475%20%E5%88%86%E6%9E%90/</id>
+    <published>2023-03-14T16:00:00.000Z</published>
+    <updated>2024-04-26T02:12:27.012Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;为了分析 &lt;code&gt;CVE-2023-25610&lt;/code&gt; 舒服点，就先分析往期的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="二进制安全" scheme="https://qi4l.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="ROP" scheme="https://qi4l.github.io/tags/ROP/"/>
+    
+    <category term="堆溢出" scheme="https://qi4l.github.io/tags/%E5%A0%86%E6%BA%A2%E5%87%BA/"/>
+    
+    <category term="Fortinet" scheme="https://qi4l.github.io/tags/Fortinet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs沙盒逃逸分析</title>
+    <link href="https://qi4l.github.io/2022/11/17/nodejs%E6%B2%99%E7%9B%92%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/"/>
+    <id>https://qi4l.github.io/2022/11/17/nodejs%E6%B2%99%E7%9B%92%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</id>
+    <published>2022-11-16T16:00:00.000Z</published>
+    <updated>2024-04-26T02:19:44.751Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;分析 yapi 的漏洞时接触到就随写&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="WEB" scheme="https://qi4l.github.io/categories/WEB/"/>
+    
+    
+    <category term="js" scheme="https://qi4l.github.io/tags/js/"/>
+    
+    <category term="node.js" scheme="https://qi4l.github.io/tags/node-js/"/>
+    
+    <category term="前端安全" scheme="https://qi4l.github.io/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FastJson漏洞浅析</title>
+    <link href="https://qi4l.github.io/2022/09/27/FastJson%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/"/>
+    <id>https://qi4l.github.io/2022/09/27/FastJson%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/</id>
+    <published>2022-09-26T16:00:00.000Z</published>
+    <updated>2024-04-28T03:13:59.671Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;看完了blue师傅在2022Kcon大会的议题后就想着分析一遍，最后在分别于Burp和Yakit中写个被动扫描插件&lt;/p&gt;
+&lt;p&gt;Tips: 想要跟着复现的，&lt;a href=&quot;https://github.com/alibaba/fastjson/tags&quot;&gt;从这里下载Fastjson&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="WEB" scheme="https://qi4l.github.io/categories/WEB/"/>
+    
+    
+    <category term="java" scheme="https://qi4l.github.io/tags/java/"/>
+    
+    <category term="反序列化" scheme="https://qi4l.github.io/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+    <category term="fastjson" scheme="https://qi4l.github.io/tags/fastjson/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CommonsCollections 系列反序列化</title>
+    <link href="https://qi4l.github.io/2022/07/10/CommonsCollections%20%E7%B3%BB%E5%88%97%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    <id>https://qi4l.github.io/2022/07/10/CommonsCollections%20%E7%B3%BB%E5%88%97%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
+    <published>2022-07-09T16:00:00.000Z</published>
+    <updated>2024-04-26T02:14:46.784Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;如果不关心背后的原理，直接看最后的总结即可。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tips：主要是只写了个人的理解，并没有多详细&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="WEB" scheme="https://qi4l.github.io/categories/WEB/"/>
+    
+    
+    <category term="java" scheme="https://qi4l.github.io/tags/java/"/>
+    
+    <category term="反序列化" scheme="https://qi4l.github.io/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+    <category term="CC" scheme="https://qi4l.github.io/tags/CC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaMemShell</title>
+    <link href="https://qi4l.github.io/2022/03/26/JavaMemShell/"/>
+    <id>https://qi4l.github.io/2022/03/26/JavaMemShell/</id>
+    <published>2022-03-25T16:00:00.000Z</published>
+    <updated>2024-04-28T03:07:21.893Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;懒得在写一次socket分析了，因为逻辑大差不差，但是马实现起来还是有差异的&lt;/p&gt;
+&lt;p&gt;文中提到的内存马可以于此处&lt;a href=&quot;https://github.com/qi4L/JYso&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tips：如果你觉得没看懂或者很模糊，那你一定是前置知识没学好&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="WEB" scheme="https://qi4l.github.io/categories/WEB/"/>
+    
+    
+    <category term="java" scheme="https://qi4l.github.io/tags/java/"/>
+    
+    <category term="webshell" scheme="https://qi4l.github.io/tags/webshell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ROP-ret2__libc_csu_init（64位ELF）</title>
+    <link href="https://qi4l.github.io/2020/08/15/ROP-ret2__libc_csu_init%EF%BC%8864%E4%BD%8DELF%EF%BC%89/"/>
+    <id>https://qi4l.github.io/2020/08/15/ROP-ret2__libc_csu_init%EF%BC%8864%E4%BD%8DELF%EF%BC%89/</id>
+    <published>2020-08-14T16:00:00.000Z</published>
+    <updated>2024-04-28T03:07:59.113Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;随记&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="二进制安全" scheme="https://qi4l.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="ROP" scheme="https://qi4l.github.io/tags/ROP/"/>
+    
+    <category term="CTF" scheme="https://qi4l.github.io/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>32位与64位ROP构造差异</title>
+    <link href="https://qi4l.github.io/2020/06/20/32%E4%BD%8D%E4%B8%8E64%E4%BD%8DROP%E6%9E%84%E9%80%A0%E5%B7%AE%E5%BC%82/"/>
+    <id>https://qi4l.github.io/2020/06/20/32%E4%BD%8D%E4%B8%8E64%E4%BD%8DROP%E6%9E%84%E9%80%A0%E5%B7%AE%E5%BC%82/</id>
+    <published>2020-06-19T16:00:00.000Z</published>
+    <updated>2024-04-28T03:07:21.883Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;做pwn的时候遇到这个疑惑，为什么32位和64位的ROP写起来不一样？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="二进制安全" scheme="https://qi4l.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="ROP" scheme="https://qi4l.github.io/tags/ROP/"/>
+    
+    <category term="Payload构造" scheme="https://qi4l.github.io/tags/Payload%E6%9E%84%E9%80%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>APK流量转发</title>
+    <link href="https://qi4l.github.io/2019/04/13/APK%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/"/>
+    <id>https://qi4l.github.io/2019/04/13/APK%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/</id>
+    <published>2019-04-12T16:00:00.000Z</published>
+    <updated>2024-04-26T02:14:46.779Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;做个记录&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="安卓" scheme="https://qi4l.github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+    <category term="APP" scheme="https://qi4l.github.io/tags/APP/"/>
+    
+    <category term="APK" scheme="https://qi4l.github.io/tags/APK/"/>
+    
+    <category term="APP渗透" scheme="https://qi4l.github.io/tags/APP%E6%B8%97%E9%80%8F/"/>
+    
+    <category term="小程序渗透" scheme="https://qi4l.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
+  
+</feed>
