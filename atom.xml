@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>QI4L的沉思录</title>
   
-  <subtitle>千里之行，始于足下</subtitle>
+  <subtitle>VMP,反病毒,hook,syscall,逆向</subtitle>
   <link href="https://qi4l.github.io/atom.xml" rel="self"/>
   
   <link href="https://qi4l.github.io/"/>
@@ -102,9 +102,9 @@
     <category term="Windows安全" scheme="https://qi4l.github.io/categories/Windows%E5%AE%89%E5%85%A8/"/>
     
     
-    <category term="Windows" scheme="https://qi4l.github.io/tags/Windows/"/>
-    
     <category term="提取" scheme="https://qi4l.github.io/tags/%E6%8F%90%E5%8F%96/"/>
+    
+    <category term="Windows" scheme="https://qi4l.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -186,7 +186,7 @@
     
     
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;看完了blue师傅在2022Kcon大会的议题后就想着分析一遍，最后在分别于Burp和Yakit中写个被动扫描插件&lt;/p&gt;
-&lt;p&gt;Tips: 想要跟着复现的，&lt;a href=&quot;https://github.com/alibaba/fastjson/tags&quot;&gt;从这里下载Fastjson&lt;/a&gt;&lt;/p&gt;</summary>
+&lt;p&gt;Tips: 想要跟着复现的，&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2FsaWJhYmEvZmFzdGpzb24vdGFncw==&quot;&gt;从这里下载Fastjson&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -236,7 +236,7 @@
     
     
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;懒得在写一次socket分析了，因为逻辑大差不差，但是马实现起来还是有差异的&lt;/p&gt;
-&lt;p&gt;文中提到的内存马可以于此处&lt;a href=&quot;https://github.com/qi4L/JYso&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文中提到的内存马可以于此处&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL3FpNEwvSllzbw==&quot;&gt;下载&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tips：如果你觉得没看懂或者很模糊，那你一定是前置知识没学好&lt;/p&gt;
 &lt;/blockquote&gt;</summary>

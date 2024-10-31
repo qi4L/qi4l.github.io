@@ -8,6 +8,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/prof.jpg">
+  <meta name="msvalidate.01" content="E8B6DE7DCFB7B9BA2CD14AB2A553B0EB">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -17,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="不积跬步，无以至千里">
 <meta property="og:type" content="website">
@@ -37,7 +38,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>QI4L的沉思录</title>
+<title>QI4L的沉思录 - VMP,反病毒,hook,syscall,逆向</title>
   
 
 
@@ -74,7 +75,7 @@
       <h1 class="site-title">QI4L的沉思录</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">千里之行，始于足下</p>
+      <p class="site-subtitle" itemprop="description">VMP,反病毒,hook,syscall,逆向</p>
   </div>
 
   <div class="site-nav-right">
@@ -143,10 +144,7 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/qi4L" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:nuxm771@163.com" title="E-Mail → mailto:nuxm771@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpNEw=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="rss → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>rss</a>
@@ -864,7 +862,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>看完了blue师傅在2022Kcon大会的议题后就想着分析一遍，最后在分别于Burp和Yakit中写个被动扫描插件</p>
-<p>Tips: 想要跟着复现的，<a target="_blank" rel="noopener" href="https://github.com/alibaba/fastjson/tags">从这里下载Fastjson</a></p>
+<p>Tips: 想要跟着复现的，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FsaWJhYmEvZmFzdGpzb24vdGFncw==">从这里下载Fastjson<i class="fa fa-external-link-alt"></i></span></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/27/FastJson%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/#more" rel="contents">
@@ -1052,7 +1050,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>懒得在写一次socket分析了，因为逻辑大差不差，但是马实现起来还是有差异的</p>
-<p>文中提到的内存马可以于此处<a target="_blank" rel="noopener" href="https://github.com/qi4L/JYso">下载</a></p>
+<p>文中提到的内存马可以于此处<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpNEwvSllzbw==">下载<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>Tips：如果你觉得没看懂或者很模糊，那你一定是前置知识没学好</p>
 </blockquote>

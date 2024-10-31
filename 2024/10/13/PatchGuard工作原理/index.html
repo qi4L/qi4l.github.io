@@ -8,6 +8,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/prof.jpg">
+  <meta name="msvalidate.01" content="E8B6DE7DCFB7B9BA2CD14AB2A553B0EB">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -17,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="前言之前找资料的时候发现国内关于这块基本是空白的，参阅多篇论文后有的此文">
 <meta property="og:type" content="article">
@@ -85,7 +86,7 @@
       <p class="site-title">QI4L的沉思录</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">千里之行，始于足下</p>
+      <p class="site-subtitle" itemprop="description">VMP,反病毒,hook,syscall,逆向</p>
   </div>
 
   <div class="site-nav-right">
@@ -155,10 +156,7 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/qi4L" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:nuxm771@163.com" title="E-Mail → mailto:nuxm771@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpNEw=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="rss → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>rss</a>
@@ -296,7 +294,7 @@
 <p>KiInitPatchGuardContext 的第三个参数是一个随机值，用于确定要检查的数据的总大小。该值除以硬编码值 0x140000，结果值立即设置到偏移量 0x6cc 处的 PatchGuard 上下文结构中。每次 PatchGuard 检查时要进行校验和的数据的最大大小（以字节为单位）由该值决定。PatchGuard 维护一个要检查完整性的结构列表，每次校验和之后，计数器都会增加数据的大小。当检查的数据总量小于先前定义的最大值时，PatchGuard 将继续检查其列表中的下一个结构。</p>
 <p>KiInitPatchGuardContext 的第五个参数是一个布尔值，用于确定是否应执行 ntoskrnl 函数的校验和。此检查完成后，结果将存储在 PatchGuard 上下文中，以及 PatchGuard 检查的其他 Windows 内核结构中。在 KiFilterFiberParam 中，仅在第一次调用 KiInitPatchGuardContext 时，此参数才设置为 True。</p>
 <p>以上就是可能来自 KiInitPatchGuardContext 的初始化方法的描述。其他方法直接初始化，或者根本不使用任何上下文结构。</p>
-<h2 id="PatchGuardTVCallback-又名-542875F90F9B47F497B64BA219CACF69-回调"><a href="#PatchGuardTVCallback-又名-542875F90F9B47F497B64BA219CACF69-回调" class="headerlink" title="PatchGuardTVCallback 又名 542875F90F9B47F497B64BA219CACF69 回调"></a>PatchGuardTVCallback 又名 542875F90F9B47F497B64BA219CACF69 回调</h2><p>KiFilterFiberContext 函数包含一个小的回调函数，该函数在 ntoskrnl 中找不到，并以名为 PatchGuardTVCallback 的函数指针作为参数。 此指针在二进制文件 <code>mssecflt.sys</code> 中的函数 SecInitializeKernelIntegrityCheck 中初始化。此函数直接从 <code>mssecflt.sys</code> 的驱动程序入口例程调用，该例程在启动过程中调用。 回调函数 SecKernelIntegrityCallback 只是将函数指针分配给全局变量，并将另一个全局变量设置为 SecProtectedRanges。 PatchGuardTVCallback 函数是 PatchGuard 检查例程之一，类似于 FsRtlMdlReadCompleteDevEx 函数，但调度方法不同。 此方法没有其他特定的初始化，因为它使用全局 PatchGuard 上下文结构。<br>如果想了解有关此回调的更多信息，请查看 <a target="_blank" rel="noopener" href="https://github.com/0xcpu/ExecutiveCallbackObjects/tree/master/542875F90F9B47F497B64BA219CACF69#542875f90f9b47f497b64ba219cacf69">542875F90F9B47F497B64BA219CACF69</a></p>
+<h2 id="PatchGuardTVCallback-又名-542875F90F9B47F497B64BA219CACF69-回调"><a href="#PatchGuardTVCallback-又名-542875F90F9B47F497B64BA219CACF69-回调" class="headerlink" title="PatchGuardTVCallback 又名 542875F90F9B47F497B64BA219CACF69 回调"></a>PatchGuardTVCallback 又名 542875F90F9B47F497B64BA219CACF69 回调</h2><p>KiFilterFiberContext 函数包含一个小的回调函数，该函数在 ntoskrnl 中找不到，并以名为 PatchGuardTVCallback 的函数指针作为参数。 此指针在二进制文件 <code>mssecflt.sys</code> 中的函数 SecInitializeKernelIntegrityCheck 中初始化。此函数直接从 <code>mssecflt.sys</code> 的驱动程序入口例程调用，该例程在启动过程中调用。 回调函数 SecKernelIntegrityCallback 只是将函数指针分配给全局变量，并将另一个全局变量设置为 SecProtectedRanges。 PatchGuardTVCallback 函数是 PatchGuard 检查例程之一，类似于 FsRtlMdlReadCompleteDevEx 函数，但调度方法不同。 此方法没有其他特定的初始化，因为它使用全局 PatchGuard 上下文结构。<br>如果想了解有关此回调的更多信息，请查看 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzB4Y3B1L0V4ZWN1dGl2ZUNhbGxiYWNrT2JqZWN0cy90cmVlL21hc3Rlci81NDI4NzVGOTBGOUI0N0Y0OTdCNjRCQTIxOUNBQ0Y2OSM1NDI4NzVmOTBmOWI0N2Y0OTdiNjRiYTIxOWNhY2Y2OQ==">542875F90F9B47F497B64BA219CACF69<i class="fa fa-external-link-alt"></i></span></p>
 <p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/ypKeYLd.png"></p>
 <h2 id="附加检查-PspProcessDelete"><a href="#附加检查-PspProcessDelete" class="headerlink" title="附加检查 PspProcessDelete"></a>附加检查 PspProcessDelete</h2><p>可以在特定函数（如 PspProcessDelete）中找到附加完整性检查，在删除进程期间对 KeServiceDescriptorTable 和 KeServiceDescriptorTableShadow 执行完整性检查。 此检查不需要任何 PatchGuard 上下文结构或专用线程，只是系统代码中存在的一小段验证。两个表的原始校验和以及计算校验和所需的初始化向量和移位值都保存在全局变量中，这使得攻击者可以修补描述符表（无论是否为 Shadow）的条目并替换原始校验和。<br>使用 KiQueryUnbiaisedInterruptTime 生成的随机值计算校验和。如果这些校验和中的任何一个失败，则通过插入 KiSchedulerDpc 的 DPC 触发 KeBugCheck。这些校验和的初始化在 CmpInitDelayRefKCBEngine 中执行。<br>要禁用此方法，可以将计时器修补为无限长或再次计算受 PatchGuard 保护的修改表的校验和。</p>
 <p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20241013110109.png"></p>

