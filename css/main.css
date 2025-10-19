@@ -222,7 +222,7 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: Jetbrains Mono, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -240,22 +240,22 @@ h6 {
   margin: 30px 0 15px;
 }
 h1 {
-  font-size: 0.775em;
+  font-size: 0.875em;
 }
 h2 {
-  font-size: 0.65em;
+  font-size: 0.75em;
 }
 h3 {
-  font-size: 0.525em;
+  font-size: 0.625em;
 }
 h4 {
-  font-size: 0.4em;
+  font-size: 0.5em;
 }
 h5 {
-  font-size: 0.275em;
+  font-size: 0.375em;
 }
 h6 {
-  font-size: 0.15em;
+  font-size: 0.25em;
 }
 p {
   margin: 0 0 20px;
@@ -1243,7 +1243,7 @@ pre code {
 }
 .site-title {
   font-family: Jetbrains Mono, Jetbrains Mono, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: normal;
   line-height: 1.5;
   margin: 0;
