@@ -6,7 +6,7 @@
   <link href="https://qi4l.github.io/atom.xml" rel="self"/>
   
   <link href="https://qi4l.github.io/"/>
-  <updated>2025-10-18T08:56:54.309Z</updated>
+  <updated>2025-10-21T02:55:38.470Z</updated>
   <id>https://qi4l.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://qi4l.github.io/2025/09/16/jackson3%E9%93%BE%E6%B5%85%E6%9E%90/"/>
     <id>https://qi4l.github.io/2025/09/16/jackson3%E9%93%BE%E6%B5%85%E6%9E%90/</id>
     <published>2025-09-16T00:00:00.000Z</published>
-    <updated>2025-10-18T08:56:54.309Z</updated>
+    <updated>2025-10-21T02:55:38.470Z</updated>
     
     
     <summary type="html">基本的分析和一些小发现</summary>
@@ -100,11 +100,11 @@
     <category term="Windows安全" scheme="https://qi4l.github.io/categories/Windows%E5%AE%89%E5%85%A8/"/>
     
     
-    <category term="Re" scheme="https://qi4l.github.io/tags/Re/"/>
-    
     <category term="Windows" scheme="https://qi4l.github.io/tags/Windows/"/>
     
     <category term="win32api" scheme="https://qi4l.github.io/tags/win32api/"/>
+    
+    <category term="Re" scheme="https://qi4l.github.io/tags/Re/"/>
     
   </entry>
   
